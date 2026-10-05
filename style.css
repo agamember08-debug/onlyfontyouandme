@@ -1,0 +1,1192 @@
+/* =========================================================
+   ONLYFONTYOUANDME — FONT MARKETPLACE UI
+   ========================================================= */
+
+:root {
+    --pink: #f72f87;
+    --pink-dark: #e51d70;
+    --pink-soft: #ffdce9;
+    --pink-light: #fff0f5;
+    --cream: #fffaf7;
+    --text: #9c3b61;
+    --text-dark: #70203f;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(220, 61, 119, 0.10);
+    --radius: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(circle at 5% 5%, #ffe8f0 0, transparent 25%),
+        radial-gradient(circle at 95% 15%, #ffe0ec 0, transparent 20%),
+        var(--cream);
+    color: var(--text-dark);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    width: min(1200px, calc(100% - 48px));
+    margin: 22px auto 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    position: relative;
+    min-width: 175px;
+    color: var(--pink);
+    line-height: 0.8;
+}
+
+.logo-main {
+    display: block;
+    font-family: "Pacifico", cursive;
+    font-size: 29px;
+}
+
+.logo-sub {
+    display: block;
+    margin-left: 42px;
+    margin-top: 5px;
+    font-family: "Pacifico", cursive;
+    font-size: 13px;
+}
+
+.logo-star {
+    position: absolute;
+    left: -5px;
+    top: -14px;
+    color: #ffad4d;
+    font-size: 25px;
+    transform: rotate(-15deg);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px;
+
+    background: white;
+    border: 1px solid #ffd9e6;
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+}
+
+.nav a {
+    padding: 12px 18px;
+    border-radius: 30px;
+    color: var(--pink);
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+.nav a:hover {
+    background: var(--pink-soft);
+}
+
+.nav .nav-active {
+    color: white;
+    background: linear-gradient(135deg, #ff4d9a, #ee2178);
+    box-shadow: 0 7px 18px rgba(247, 47, 135, 0.25);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-btn {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #ffd9e6;
+    border-radius: 50%;
+    background: white;
+    color: var(--pink-dark);
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.help-btn {
+    padding: 13px 23px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff4d9a, #ed247a);
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(247, 47, 135, 0.22);
+}
+
+
+/* =========================================================
+   MAIN WIDTH
+   ========================================================= */
+
+main {
+    width: min(1200px, calc(100% - 48px));
+    margin: auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.hero-card {
+    min-height: 420px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.hero-intro {
+    padding: 58px 58px;
+    background: linear-gradient(135deg, #fff0f5, #ffd9e8);
+    border: 2px solid white;
+    box-shadow: var(--shadow);
+}
+
+.small-label {
+    color: #db4e7d;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.hero-intro h1 {
+    max-width: 450px;
+    color: #a53c61;
+    font-size: clamp(38px, 4vw, 62px);
+    line-height: 1.04;
+    letter-spacing: -2px;
+}
+
+.hero-intro h1 span {
+    display: block;
+    color: var(--pink);
+}
+
+.hero-intro p {
+    max-width: 330px;
+    margin: 22px 0 28px;
+    color: #b95c7b;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.pink-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 24px;
+    border-radius: 40px;
+    color: white;
+    background: linear-gradient(135deg, #ff4d9a, #ed247a);
+    box-shadow: 0 9px 22px rgba(247, 47, 135, 0.25);
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pink-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 13px 25px rgba(247, 47, 135, 0.32);
+}
+
+.doodle {
+    position: absolute;
+    color: var(--pink);
+}
+
+.heart {
+    right: 50px;
+    top: 105px;
+    font-size: 95px;
+    transform: rotate(8deg);
+}
+
+.sparkle {
+    right: 90px;
+    bottom: 60px;
+    font-size: 40px;
+}
+
+.hero-product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(145deg, #fa4390, #ed2478);
+    color: white;
+    box-shadow: 0 15px 35px rgba(236, 39, 119, 0.20);
+}
+
+.blob {
+    position: absolute;
+    width: 180px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(255, 158, 202, 0.30);
+}
+
+.blob-one {
+    left: -40px;
+    top: -20px;
+    transform: rotate(25deg);
+}
+
+.blob-two {
+    right: -45px;
+    bottom: -20px;
+    transform: rotate(-20deg);
+}
+
+.crown {
+    position: absolute;
+    top: 54px;
+    font-size: 42px;
+    color: #ffe9a9;
+}
+
+.hero-font {
+    position: relative;
+    z-index: 2;
+    margin-top: 35px;
+    font-family: "Pacifico", cursive;
+    font-size: clamp(47px, 5vw, 72px);
+    line-height: 0.95;
+    color: white;
+    text-shadow:
+        4px 5px 0 rgba(153, 21, 76, 0.35),
+        0 10px 20px rgba(106, 0, 45, 0.18);
+    transform: rotate(-4deg);
+}
+
+.hero-line {
+    position: absolute;
+    width: 220px;
+    height: 8px;
+    bottom: 96px;
+    background: #ffe7a8;
+    border-radius: 50%;
+    transform: rotate(-3deg);
+}
+
+.hero-caption {
+    position: absolute;
+    bottom: 50px;
+    right: 48px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.hero-heart {
+    position: absolute;
+    left: 42px;
+    bottom: 68px;
+    font-size: 34px;
+}
+
+.hero-star {
+    position: absolute;
+    right: 52px;
+    top: 75px;
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.fonts-section {
+    padding: 58px 0 38px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.section-heading > div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.heading-deco {
+    color: #ffae4f;
+    font-size: 40px;
+    transform: rotate(-12deg);
+}
+
+.section-heading h2 {
+    color: var(--pink);
+    font-family: "Pacifico", cursive;
+    font-size: 39px;
+    font-weight: 400;
+}
+
+.heading-spark {
+    color: var(--pink);
+    font-size: 25px;
+}
+
+.view-all {
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: #ffe2ed;
+    color: var(--pink-dark);
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FONT CARDS
+   ========================================================= */
+
+.font-image {
+    position: relative;
+    width: 100%;
+    height: 205px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #ffe6ef;
+}
+
+.font-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+.font-card:hover .font-image img {
+    transform: scale(1.04);
+}
+
+
+.font-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.font-card {
+    position: relative;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ffd6e5;
+    border-radius: 22px;
+    box-shadow: 0 7px 22px rgba(209, 55, 110, 0.10);
+    transition: 0.25s ease;
+}
+
+.font-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 30px rgba(209, 55, 110, 0.17);
+}
+
+.font-preview {
+    height: 205px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    border-radius: 16px;
+    background: #ffe6ef;
+
+    font-family: "Pacifico", cursive;
+    font-size: 35px;
+    line-height: 1;
+}
+
+.font-preview span {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.pickles {
+    color: #e83282;
+    transform: none;
+}
+
+.jennies {
+    color: #8962ce;
+    font-size: 39px;
+}
+
+.strawberry {
+    color: #ee507b;
+    font-size: 29px;
+}
+
+.milky {
+    color: #4995c9;
+    font-size: 32px;
+}
+
+.font-info {
+    padding: 14px 8px 6px;
+}
+
+.font-info h3 {
+    color: #6f2948;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 30px;
+    background: #ffe0eb;
+    color: var(--pink);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.favorite {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+
+    background: white;
+    color: var(--pink);
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(160, 34, 85, 0.12);
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SLIDER LINE
+   ========================================================= */
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.slider-progress {
+    height: 4px;
+    flex: 1;
+    position: relative;
+    border-radius: 20px;
+    background: #ffdbe8;
+}
+
+.slider-progress::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48%;
+    height: 100%;
+    border-radius: 20px;
+    background: var(--pink);
+}
+
+.slider span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffc5da;
+}
+
+
+/* =========================================================
+   PROMO BANNERS
+   ========================================================= */
+
+.promos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 12px 0 65px;
+}
+
+.promo-card {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+    padding: 40px 34px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffe5ee, #ffd2e2);
+}
+
+.promo-content {
+    position: relative;
+    z-index: 3;
+}
+
+.promo-content small {
+    color: #dc4c7c;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.promo-content h2 {
+    margin: 12px 0;
+    color: var(--pink);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 1.15;
+}
+
+.promo-content p {
+    margin-bottom: 20px;
+    color: #b55676;
+    line-height: 1.5;
+}
+
+.pink-btn.small {
+    padding: 11px 18px;
+    font-size: 13px;
+}
+
+.fake-tote {
+    position: absolute;
+    right: 45px;
+    bottom: -15px;
+
+    width: 155px;
+    height: 190px;
+
+    border-radius: 10px 10px 25px 25px;
+    background: #fffdf7;
+    box-shadow: 0 15px 30px rgba(150, 73, 92, 0.12);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fake-tote::before,
+.fake-tote::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 70px;
+    top: -50px;
+    border: 8px solid #f9faf2;
+    border-bottom: 0;
+    border-radius: 35px 35px 0 0;
+}
+
+.fake-tote::before {
+    left: 25px;
+}
+
+.fake-tote::after {
+    right: 25px;
+}
+
+.fake-tote div {
+    font-size: 65px;
+    color: #ff5c9d;
+}
+
+.flowers {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 45px;
+    color: #fff;
+}
+
+.fake-mug {
+    position: absolute;
+    right: 45px;
+    bottom: 25px;
+
+    width: 150px;
+    height: 130px;
+    border-radius: 15px 15px 35px 35px;
+
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(150, 73, 92, 0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--pink);
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-size: 18px;
+    line-height: 1.05;
+}
+
+.fake-mug::after {
+    content: "";
+    position: absolute;
+    right: -42px;
+    top: 28px;
+    width: 55px;
+    height: 55px;
+    border: 13px solid white;
+    border-left: 0;
+    border-radius: 0 50% 50% 0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    background:
+        radial-gradient(circle at 20% 0%, #ffd7e6 0 90px, transparent 91px),
+        radial-gradient(circle at 80% 0%, #ffd7e6 0 100px, transparent 101px),
+        #ffeaf2;
+
+    color: var(--pink);
+}
+
+.footer-brand {
+    font-family: "Pacifico", cursive;
+    font-size: 20px;
+}
+
+.footer-heart {
+    font-size: 30px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        min-height: 360px;
+    }
+
+    .font-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .promos {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header,
+    main {
+        width: min(100% - 24px, 1200px);
+    }
+
+    .header {
+        margin-top: 14px;
+    }
+
+    .logo {
+        min-width: auto;
+    }
+
+    .logo-main {
+        font-size: 23px;
+    }
+
+    .logo-sub {
+        font-size: 10px;
+        margin-left: 30px;
+    }
+
+    .header-actions {
+        gap: 6px;
+    }
+
+    .search-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .help-btn {
+        padding: 10px 14px;
+    }
+
+    .nav {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .nav a {
+        padding: 10px 13px;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .hero-intro {
+        padding: 40px 30px;
+    }
+
+    .hero-intro h1 {
+        font-size: 42px;
+    }
+
+    .hero-product {
+        min-height: 350px;
+    }
+
+    .hero-font {
+        font-size: 53px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .view-all {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+
+    .font-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .font-preview {
+        height: 145px;
+        font-size: 25px;
+    }
+
+    .jennies {
+        font-size: 28px;
+    }
+
+    .strawberry,
+    .milky {
+        font-size: 23px;
+    }
+
+    .font-info h3 {
+        font-size: 11px;
+    }
+
+    .tag {
+        font-size: 9px;
+        padding: 6px 8px;
+    }
+
+    .favorite {
+        width: 29px;
+        height: 29px;
+        font-size: 17px;
+    }
+
+    .promo-card {
+        padding: 30px 24px;
+        min-height: 280px;
+    }
+
+    .fake-tote,
+    .fake-mug {
+        opacity: 0.55;
+        right: 15px;
+    }
+
+    .promo-content h2 {
+        font-size: 27px;
+    }
+}
+
+/* =========================================================
+   View All
+   ========================================================= */
+
+css
+/* =========================================
+   FONT PAGE
+========================================= */
+
+
+
+.fonts-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.page-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.small-title {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.page-heading h1 {
+    margin: 0;
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #222;
+}
+
+.page-heading .description {
+    margin: 20px auto 0;
+    max-width: 550px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+}
+
+
+/* =========================================
+   FONT GRID
+========================================= */
+
+.font-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   FONT CARD
+========================================= */
+
+.font-card {
+    background: #fefefe;
+
+    border: 1px solid #fcfbfb;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.font-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #ddd;
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+
+/* =========================================
+   FONT IMAGE
+========================================= */
+
+.font-image-link {
+    display: block;
+
+    overflow: hidden;
+
+    background: #fcfbfb;
+}
+
+.font-image-link img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 6 / 4;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.font-card:hover .font-image-link img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   FONT INFORMATION
+========================================= */
+
+.font-info {
+    padding: 22px;
+}
+
+.font-info h2 {
+    margin: 0;
+
+    font-size: 19px;
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    color: #222;
+}
+
+.font-info p {
+    margin: 8px 0 20px;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #888;
+}
+
+
+/* =========================================
+   PRICE + BUY
+========================================= */
+
+.font-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #222;
+}
+
+.buy-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 80px;
+
+    padding: 10px 18px;
+
+    border-radius: 50px;
+
+    background: #222;
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.buy-button:hover {
+    background: #000;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #eee;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .fonts-page {
+        padding: 70px 30px;
+    }
+
+    .font-grid {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 24px;
+    }
+
+    .page-heading h1 {
+        font-size: 44px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .fonts-page {
+        padding: 60px 25px;
+    }
+
+    .font-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .page-heading {
+        margin-bottom: 45px;
+    }
+
+    .page-heading h1 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+    .fonts-page {
+        padding: 50px 18px;
+    }
+
+    .page-heading {
+        margin-bottom: 35px;
+    }
+
+    .small-title {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .page-heading h1 {
+        font-size: 32px;
+    }
+
+    .page-heading .description {
+        font-size: 14px;
+    }
+
+    .font-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .font-info {
+        padding: 18px;
+    }
+
+    .font-info h2 {
+        font-size: 18px;
+    }
+
+}
