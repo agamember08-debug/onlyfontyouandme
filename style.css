@@ -397,6 +397,8 @@ main {
     width: 100%;
     height: 100%;
     display: block;
+   aspect-ratio: 6 / 4;
+
 
     object-fit: cover;
 
@@ -945,7 +947,7 @@ css
 
 
 /* =========================================
-   FONT CARD
+   FONT CARD VIEW ALL
 ========================================= */
 
 .font-card {
