@@ -459,26 +459,6 @@ main {
     color: white;
 }
 
-.pickles {
-    color: #e83282;
-    transform: none;
-}
-
-.jennies {
-    color: #8962ce;
-    font-size: 39px;
-}
-
-.strawberry {
-    color: #ee507b;
-    font-size: 29px;
-}
-
-.milky {
-    color: #4995c9;
-    font-size: 32px;
-}
-
 .font-info {
     padding: 14px 8px 6px;
 }
