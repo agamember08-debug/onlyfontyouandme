@@ -433,68 +433,7 @@ main {
     box-shadow: 0 16px 30px rgba(209, 55, 110, 0.17);
 }
 
-.font-preview {
-    height: 205px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
 
-    border-radius: 16px;
-    background: #ffe6ef;
-
-    font-family: "Pacifico", cursive;
-    font-size: 35px;
-    line-height: 1;
-}
-
-.font-preview span {
-    position: absolute;
-    top: 15px;
-    right: 18px;
-    font-family: sans-serif;
-    font-size: 20px;
-    color: white;
-}
-
-.font-info {
-    padding: 14px 8px 6px;
-}
-
-.font-info h3 {
-    color: #6f2948;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.tag {
-    display: inline-block;
-    padding: 7px 13px;
-    border-radius: 30px;
-    background: #ffe0eb;
-    color: var(--pink);
-    font-size: 11px;
-    font-weight: 700;
-}
-
-.favorite {
-    position: absolute;
-    top: 18px;
-    right: 18px;
-
-    width: 34px;
-    height: 34px;
-    border: 0;
-    border-radius: 50%;
-
-    background: white;
-    color: var(--pink);
-    font-size: 20px;
-    box-shadow: 0 4px 12px rgba(160, 34, 85, 0.12);
-    cursor: pointer;
-}
 
 
 /* =========================================================
